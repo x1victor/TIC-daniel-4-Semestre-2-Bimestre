@@ -10,7 +10,7 @@ class DeletePromocoesService {
         if(!promocoesExists){
             throw new AppError('Produto não existe', 400)
         }
-        await PromocoesRepository.remove(promocoesExists)
+        await promocoesRepository.remove(promocoesExists)
     }
 
    
