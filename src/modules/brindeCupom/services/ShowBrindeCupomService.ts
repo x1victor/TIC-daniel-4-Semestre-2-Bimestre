@@ -16,6 +16,7 @@ class ShowBrindeCupom {
         if(!brindeCupom){
             throw new AppError("Brinde / Cupom inesistente.")
         }
+        return brindecupom
     }
 }
 
