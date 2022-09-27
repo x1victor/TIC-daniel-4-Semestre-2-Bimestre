@@ -9,6 +9,7 @@ interface IRequest {
 
 class CreatePromocoesService{
     public async execute({name, valor}:IRequest): Promise<Promocoes>{
+
         const promocoesRepository = getCustomRepository(PromocoesRepository)
 
         const promocoesExist = await promocoesRepository.findByName(name);
@@ -16,7 +17,7 @@ class CreatePromocoesService{
             throw new AppError('Já existe um produto com este nome')
         }
 
-        const novo = PromocoesRepository.create({
+        const novo = promocoesRepository.create({
             name,valor
         })
 
