@@ -17,6 +17,7 @@ class ShowPromocoesService{
         if(!promocoes){
             throw new AppError('Promoção não existe')
         }
+        return promocoes
     }
 }
 export default ShowPromocoesService
