@@ -19,7 +19,7 @@ class CreateBrindeCupomService {
             throw new AppError('Brinde / Cupom já existente')
         }
 
-        const novo = BrindeCupomRepository.create({
+        const novo = brindeCupomRepository.create({
             nomeBrinde, qtdpont
         })
 
