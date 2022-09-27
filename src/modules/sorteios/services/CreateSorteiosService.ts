@@ -10,7 +10,7 @@ interface IRequest {
 }
 
 class CreateSorteiosService {
-    public async execute({nomeSorteios,qtdSorteios}): Promise<Sorteios> {
+    public async execute({nomeSorteios,qtdSorteios}: IRequest): Promise<Sorteios> {
 
         const sorteiosRepository = getCustomRepository(SorteiosRepository)
 

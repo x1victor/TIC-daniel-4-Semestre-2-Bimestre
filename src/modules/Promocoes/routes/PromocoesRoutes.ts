@@ -3,10 +3,10 @@ import isAuthenticated from "../../../middleware/isAuthenticated"
 import PromocoesController from "../controllers/PromocoesController"
 
 const routerPromocoes = Router()
-// cria um objeto controller
+
 const controllerPromocoes = new PromocoesController()
 
-// está criada a rota para inserir um produto no banco de dados
+
 routerPromocoes.post('/', controllerPromocoes.create)
 
 routerPromocoes.get('/', 

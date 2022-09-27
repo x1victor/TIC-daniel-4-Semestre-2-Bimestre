@@ -1,5 +1,4 @@
 import { EntityRepository, Repository } from "typeorm";
-import Product from "../../../products/typeorm/entities/Product";
 import Sorteios from "../entities/sorteios";
 
 @EntityRepository(Sorteios)

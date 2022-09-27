@@ -20,14 +20,14 @@ class PromocoesCrontroller{
         return response.json(Promocoes)
     }
     public async show(request: Request, response: Response): Promise<Response> {
-        // recupera id do produto
+  
         const {idPromocao} = request.params
         const showPromocoesService = new ShowPromocoesService()
         const promocoes = await showPromocoesService.execute({idPromocao})
-        return response.json(promocoes) // retorna o produto selecionado
+        return response.json(promocoes)
     }
     public async delete(request: Request, response: Response): Promise<Response> {
-        // recupera id do produto
+
         const {idPromocao} = request.params
         const deletePromocoesService = new DeletePromocoesService()
         await deletePromocoesService.execute(idPromocao)
@@ -35,7 +35,7 @@ class PromocoesCrontroller{
     }
 
     public async update(request: Request, response: Response): Promise<Response> {
-        // recupera id, name, price, quantity do produto
+
         const {idPromocao} = request.params
         const {name, valor} = request.body
         const updatePromocoesService = new UpdatePromocoesService()

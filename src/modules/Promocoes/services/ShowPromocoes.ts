@@ -8,7 +8,7 @@ interface IRequest{
 }
 
 class ShowPromocoesService{
-    public async execute({idPromocao}: IRequest): Promise<Promocoes>{
+    public async execute({idPromocao}: IRequest): Promise<Promocoes> {
 
         let promocoesRepository = getCustomRepository(PromocoesRepository)
 
